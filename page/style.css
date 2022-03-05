@@ -1,0 +1,67 @@
+.font_1{ 
+    font-family: 맑은_고딕;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+}
+
+div.grand{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0px 2px 6px 0px rgba(14,14,44,0.1);
+}
+
+div.parent1{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 300px;
+}
+
+div.child1_1{
+    position: absolute;
+    width: 50px;
+    line-height: 50px;
+}
+
+div.child1_2{
+    position: absolute;
+    left: 70px;
+    width: 70px;
+    line-height: 50px;
+
+}
+
+div.child1_3{
+    position: absolute;
+    left: 155px;
+    width: 70px;
+    line-height: 50px;
+}
+
+div.parent2{
+    position: absolute;
+    top: 32px;
+    left: 870px;
+    width: 200px;
+}
+
+div.parent3{
+    position: absolute;
+    top: 35px;
+    left: 50px;
+}
+
+div.grand2{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url(./image/main1.png);
+    opacity: 0.5;
+}
+
+div.grand3{
+
+}
