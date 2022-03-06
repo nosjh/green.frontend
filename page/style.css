@@ -1,10 +1,34 @@
 .font_1{ 
-    font-family: 맑은_고딕;
-    font-size: 15px;
+    font-family: 맑은_고딕 sans-serif;
+    font-size: 16px;
     font-weight: bold;
     color: #333333;
 }
 
+.font_2{
+    font-family: 맑은_고딕 sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    line-height: 25px;
+    text-align:center;
+}
+
+.font_3{ 
+    font-family: 맑은_고딕 sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.6)
+}
+
+.search_input{
+    position: absolute;
+    border: none;
+    width: 500px;
+    height: 48px;
+    left: 25px;
+}
+/* 헤더 */
 div.grand{
     position: relative;
     width: 100%;
@@ -53,15 +77,124 @@ div.parent3{
     top: 35px;
     left: 50px;
 }
-
+/* 메인이미지 */
 div.grand2{
     position: relative;
     width: 100%;
-    height: 700px;
+    height: 660px;
     background-image: url(./image/main1.png);
     opacity: 0.5;
 }
 
-div.grand3{
-
+div.parent4{
+    position: absolute;
+    width: 600px;
+    height: 50px;
+    bottom: 100px;
+    background-color: white;
+    border: 1px inset #bdbdbd;
+    border-radius: 25px;
+    left: 660px;
 }
+
+div.child2_1{
+    position: absolute;
+    right: 10px;
+}
+
+/* 하단버튼 */
+div.grand3{
+    position: relative;
+    width: 100%;
+    height: 210px;
+    background-color: white;
+}
+
+div.parent3_1{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #bdbdbd;
+}
+
+div.parent3_2{
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background-color: white;
+}
+
+.button {
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #bdbdbd;
+    box-shadow: 1px 1px 2px 0px rgba(14,14,44,0.2);
+}
+
+.button > a {
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    line-height: 50px;
+    }
+    .button:hover { 
+    background-color: #0071bc;
+    border: 1px solid #0071bc;
+    box-shadow: 1px 1px 2px 0px rgba(14,14,44,0.2);
+    }
+
+    .button >a:hover { color: white;}
+
+div.child3_1{
+    position: absolute;
+    width: 350px;
+    height: 50px;
+    top: 60px;
+    left: 200px;
+}
+
+div.child3_2{
+    position: absolute;
+    width: 350px;
+    height: 50px;
+    top: 60px;
+    left: 590px;
+}
+
+div.child3_3{
+    position: absolute;
+    width: 350px;
+    height: 50px;
+    top: 60px;
+    left: 980px;
+}
+
+div.child3_4{
+    position: absolute;
+    width: 350px;
+    height: 50px;
+    top: 60px;
+    left: 1370px;
+}
+
+/* 푸터 */
+div.grand4{
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background-color: #333333;
+}
+
+div.parent4_1{
+    position: absolute;
+    left: 200px;
+    top: 30px;
+}
+
+div.parent4_2{
+    position: absolute;
+    right: 165px;
+    top: 30px;
+}
+
