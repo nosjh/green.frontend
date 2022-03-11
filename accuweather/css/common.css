@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* 초기화 */
+* {
+    margin: 0; padding: 0;
+    font-family: Arial, 'san-serif' ;
+}
+a { text-decoration: none !important; }
+img { border: 0; }
+ul { list-style: none; }
+
+/* 헤더 */
+#main-header {
+    height: 390px;
+    background: gray;
+    color: white;
+}
+
+#main-header a {
+    color: white;
+}
+
+#main-header > .gnb-container {
+    background: black;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+#main-header .gnb {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+#main-header .gnb .logo {
+    float: left;
+    width: 190px;
+    margin-top: 12px;
+}
+
+#main-header .gnb ul.nav {
+    float: left;
+    overflow: hidden;
+    padding: 0 60px;
+    width: calc(100% - 217px);
+}
