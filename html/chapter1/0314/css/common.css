@@ -26,10 +26,47 @@ ul { list-style: none; }
 
 #main-header a {
     color: rgb(37, 37, 37);
+    text-align: center;
 }
 
 #main-header .gnb {
     overflow: hidden;
     position: relative;
     margin: 0 auto;
+    width: 960px;
 }
+
+#main-header .logo {
+    float: left;
+    margin-top: 20px;
+}
+
+#main-header ul.nav {
+    float: left;
+    overflow: hidden;
+    width: calc(100% - 150px);
+    
+}
+
+#main-header ul.nav > li {
+    float: left;
+    padding: 30px;
+    width: 20%;
+}
+
+/* 푸터 */
+#main-footer {
+    height: 160px;
+    background: black;
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 767px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #main-header .gnb {
+        width: 80vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {}
