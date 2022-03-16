@@ -74,6 +74,138 @@
             background: gray;
         }
         
+        .square {
+            height: 100%;
+            margin: 20px 0;
+        }
+
+        .square__content {
+            background: wheat;
+        }
+
+        .square__content > ul {
+            overflow: hidden;
+        }
+
+        .square__content > ul > li {
+            float: left;
+            width: 50%;
+            height: 50%;
+        }
+        
+        .square__content > ul > li:nth-child(1) {
+            background: goldenrod;
+        }
+
+        .square__content > ul > li:nth-child(2) {
+            background: rgb(241, 192, 68);
+        }
+
+        .square__content > ul > li:nth-child(3) {
+            background: rgb(252, 219, 135);
+        }
+
+        .square__content > ul > li:nth-child(4) {
+            background: rgb(255, 241, 207);
+        }
+
+        .news {
+            height: 200px;
+            margin: 20px 0;
+        }
+
+        h2 {
+            width: 40%;
+        }
+
+        .news__content {
+            background: rgb(255, 227, 227);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .news__content > ul {
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+    
+        }
+
+        .news__content > ul > li:nth-child(1) {
+            background: aquamarine;
+            width: 100%;
+        }
+
+        .news__content > ul > li:nth-child(2) {
+            background: rgb(142, 214, 190);
+            display: none;
+        }
+
+        .news__content > ul > li:nth-child(3) {
+            background: rgb(224, 255, 245);
+            display: none;
+        }
+
+        .event {
+            height: 400px;
+        }
+
+        .event__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event__content > div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .event__content > .content__event {
+            background: goldenrod;
+        }
+
+        .event__content > .content__new-item {
+            background: salmon;
+            overflow: hidden;
+        }
+
+        .content__new-item > .new-item-01 {
+            float: left;
+            width: 50%;
+            background: rgb(252, 161, 151);
+        }
+
+        .content__new-item > .new-item-02 {
+            float: left;
+            width: 50%;
+            background: rgb(255, 202, 196);
+        }
+
+        /* 767이상 */
+        @media all and (min-width:767px) {
+            .square__content ul li {
+                width: 25%;
+                height: 25%;
+            }
+
+            .news__content > ul > li:nth-child(1) {
+                width: 33.33%;
+            }
+
+            .news__content > ul > li:nth-child(2) {
+                width: 33.33%;
+                display: block;
+            }
+
+            .news__content > ul > li:nth-child(3) {
+                width: 33.33%;
+                display: block;
+            }
+
+            .event__content {
+                flex-direction: row;
+            }
+        }
 
     </style>
 </head>
@@ -102,14 +234,34 @@
         <section class="slider">
             <div class="slider__content con">slider</div>
         </section>
-        <section class="button">
-            <div class="button__content con"></div>
+        <section class="square">
+            <div class="square__content con">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </div>
         </section>
         <section class="news">
-            <div class="news__content con"></div>
+            <div class="news__content con">
+                <h2>뉴스</h2>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
         </section>
         <section class="event">
-            <div class="event__content con"></div>
+            <div class="event__content con">
+                <div class="content__event">이벤트</div>
+                <div class="content__new-item">
+                    <div class="new-item-01">신제품1</div>
+                    <div class="new-item-02">신제품2</div>
+                </div>
+            </div>
         </section>
         <section class="hit">
             <div class="hit__content con"></div>
