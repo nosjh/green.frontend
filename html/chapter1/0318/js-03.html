@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+const a = 1, b = 2;
+
+
+// 함수정의(es5) ver1
+function add(num1, num2) {
+    const result = num1 + num2;
+    return result;
+};
+
+// ver2 - 호이스팅x
+const addFnc = function(num1, num2) {
+    const result = num1 + num2;
+    return result;
+};
+
+// 함수정의(es6)
+const addFnc2 = (num1, num2) => {
+    const result = num1 + num2;
+    // return을 만나면 함수를 빠져나온다
+    return result;
+    console.log("hello");
+
+    if (num1 == 3) {
+        return 0;
+    }
+};
+
+const result1 = add(a, b);
+const result2 = addFnc(a, b);
+const result3 = addFnc2(a, b);
+
+document.write(result1);
+document.write(result2);
+document.write(result3);
+
+// 호이스팅(끌어 올리다)
+
+// arguments
+/* function sum(a, b, c) {
+    console.log(arguments)
+}
+
+sum(10, 20, 30) */
+
+</script>
+</body>
+</html>
