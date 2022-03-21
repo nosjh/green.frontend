@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // const num1 = 1; // 전역변수
+    // console.lgo(num1);
+    // function test() { //전역함수
+    //     const num1 =2; // 지역변수
+    //     console.log(num1);
+    //     function test() { // 지역함수
+    //         console.log("hello");
+    //     }
+    //     test();
+    // }
+
+    // 객체 = 함수(메소드) + 속성
+    // 일반 fucntion 형태의 객체
+    
+    // 객체 정의
+    // function Tv(color, size) {
+    //     // 속성
+    //     this.color = color;
+    //     this.size = size;
+    //     this.onOff = false;
+    //     // 함수(기능)
+    //     this.colorPrint = function(newColor) {
+    //         console.log(`컬러는 ${this.color}`);
+    //     };
+    //     this.colorSize = function(sizeUp) {
+    //         const newSize = this.size + sizeUp;
+    //         console.log(`크기는 ${this.size}`);
+    //         return newSize;
+    //     };
+    //     this.turnOn = function() {
+    //         this.onOff = true;
+    //     };
+    //     this.turnOff = function() {
+    //         this.onOff = false;
+    //     };
+    // }
+    
+    // const tv = new Tv("black", 50); //객체 생성
+    // const tv2 = new Tv("white", 60);
+
+    // tv.colorPrint("white");
+    // tv.colorSize(10);
+    // tv.turnOn();
+    // tv.turnOff();
+
+    // console.log("===================================");
+
+    // tv2.colorPrint("blue");
+    // tv2.colorSize(5);
+    // tv2.turnOn();
+    // tv2.turnOff();
+    
+    // prototype 형태의 객체
+    // function Tv(color, size) {
+    //     // 속성
+    //     this.color = color;
+    //     this.size = size;
+    //     this.onOff = false;
+    // }
+    //     // 함수(기능)
+    //     this.colorPrint = function(newColor) {
+    //         console.log(`컬러는 ${this.color}`);
+    //     };
+
+    // Tv.prototype.colorPrint = function(newColor) {
+    //         console.log(`컬러는 ${this.color}`);
+    // }
+
+    // Tv.prototype.colorSize = function(sizeUp) {
+    //     const newSize = this.size + sizeUp;
+    //     console.log(`크기는 ${this.size}`);
+    //     return newSize;
+    // }
+
+    // Tv.prototype.turnOn = function() {
+    //     this.onOff = true;
+    // }
+
+    // Tv.prototype.turnOff = function() {
+    //     this.onOff = false;
+    // }
+
+    // tv.colorPrint("white");
+    // tv.colorSize(10);
+    // tv.turnOn();
+    // tv.turnOff();
+
+    // console.log("===================================");
+
+    // tv2.colorPrint("blue");
+    // tv2.colorSize(5);
+    // tv2.turnOn();
+    // tv2.turnOff();
+
+    
+
+    // es6 class 형태의 객체
+    class Tv {
+        constructor(color, size) {
+            this.color = color;
+            this.size = size;
+        }
+
+        colorPrint(newColor) {
+            console.log(`컬러는 ${this.color}`);
+        };
+        colorSize(sizeUp) {
+            const newSize = this.size + sizeUp;
+            console.log(`크기는 ${this.size}`);
+            return newSize;
+        };
+        turnOn() {
+            this.onOff = true;
+        };
+        turnOff() {
+            this.onOff = false;
+        };
+    }
+
+    tv.colorPrint("white");
+    tv.colorSize(10);
+    tv.turnOn();
+    tv.turnOff();
+
+    console.log("===================================");
+
+    tv2.colorPrint("blue");
+    tv2.colorSize(5);
+    tv2.turnOn();
+    tv2.turnOff();
+
+</script>
+</body>
+</html>

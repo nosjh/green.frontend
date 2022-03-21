@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //1
+    function Figures(num1, num2) {
+        this.num1 = 2;
+        this.num2 = 3;
+        
+        this.add = function(add) {
+            add = num1 + num2;
+        }
+
+        this.sub = function(sub) {
+            sub = num1 - num2;
+        }
+
+        this.divison = function(divison) {
+            divison = num1 / num2;
+        }
+
+        this.multiple = function(multiple) {
+            multiple = num1 * num2;
+        }
+    }
+    figures.add();
+    figures.sub();
+    figures.divison();
+    figures.multiple();
+
+    //2
+    function Figures(num1, num2) {
+        this.num1 = 2;
+        this.num2 = 3;
+    }
+
+    Figures.prototype.add = function(add) {
+        add = num1 + num2;
+    }
+    Figures.prototype.sub = function(sub) {
+        add = num1 - num2;
+    }
+    Figures.prototype.divison = function(divison) {
+        add = num1 / num2;
+    }
+    Figures.prototype.multiple = function(multiple) {
+        add = num1 * num2;
+    }
+
+    figures.add();
+    figures.sub();
+    figures.divison();
+    figures.multiple();
+
+    //3
+    class Figures {
+        constructor(num1, num2) {
+            num1 = 2;
+            num2 = 3;
+        }
+    }
+
+    add() {
+        add = num1 + num2;
+    }
+
+    sub() {
+        sub = num1 - num2;
+    }
+
+    divison() {
+        divison = num1 / num2;
+    }
+
+    multiple() {
+        multiple = num1 * num2;
+    }
+
+    figures.add();
+    figures.sub();
+    figures.divison();
+    figures.multiple();
+
+    //자동차문제
+    class Car {
+        constructor(name, color, price, engine) {
+          // 생성자
+            this.name = name;
+            this.color = color;
+            this.price = price;
+            this.engine = engine;
+        }
+
+        printNameAndColor() {
+            console.log(`모델명: ${this.name} 색상: ${this.color}`)
+        }
+
+        risePrice(price) {
+            const risePrice = this.price + price;
+        }
+
+        changeEngine(engine) {
+            
+        }
+    }
+</script>
+</body>
+</html>
