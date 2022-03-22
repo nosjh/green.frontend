@@ -8,84 +8,90 @@
 </head>
 <body>
 <script>
-    //1
-    function Figures(num1, num2) {
-        this.num1 = 2;
-        this.num2 = 3;
+    // //1
+    // function Figures(num1, num2) {
+    //     this.num1 = num1;
+    //     this.num2 = num2;
         
-        this.add = function(add) {
-            add = num1 + num2;
-        }
+    //     this.add = function() {
+    //         return this.num1 + this.num2;
+    //     }
 
-        this.sub = function(sub) {
-            sub = num1 - num2;
-        }
+    //     this.sub = function() {
+    //         return this.num1 - this.num2;
+    //     }
 
-        this.divison = function(divison) {
-            divison = num1 / num2;
-        }
+    //     this.divison = function() {
+    //         return this.num1 / this.num2;
+    //     }
 
-        this.multiple = function(multiple) {
-            multiple = num1 * num2;
-        }
-    }
-    figures.add();
-    figures.sub();
-    figures.divison();
-    figures.multiple();
+    //     this.multiple = function() {
+    //         return this.num1 * this.num2;
+    //     }
+    // }
 
-    //2
-    function Figures(num1, num2) {
-        this.num1 = 2;
-        this.num2 = 3;
-    }
+    // var figures = new Figures(2, 3);
+    // console.log(figures.add());
+    // console.log(figures.sub());
+    // console.log(figures.divison());
+    // console.log(figures.multiple());
 
-    Figures.prototype.add = function(add) {
-        add = num1 + num2;
-    }
-    Figures.prototype.sub = function(sub) {
-        add = num1 - num2;
-    }
-    Figures.prototype.divison = function(divison) {
-        add = num1 / num2;
-    }
-    Figures.prototype.multiple = function(multiple) {
-        add = num1 * num2;
-    }
+    // //2
+    // function Figures(num1, num2) {
+    //     this.num1 = num1;
+    //     this.num2 = num2;
+    // }
 
-    figures.add();
-    figures.sub();
-    figures.divison();
-    figures.multiple();
+    // Figures.prototype.add = function() {
+    //     return this.num1 + this.num2;
+    // }
+    // Figures.prototype.sub = function() {
+    //     return this.num1 - this.num2;
+    // }
+    // Figures.prototype.divison = function() {
+    //     return this.num1 / this.num2;
+    // }
+    // Figures.prototype.multiple = function(multiple) {
+    //     return this.num1 * this.num2;
+    // }
+
+    // var figures = new Figures(2, 3);
+    // console.log(figures.add());
+    // console.log(figures.sub());
+    // console.log(figures.divison());
+    // console.log(figures.multiple());
 
     //3
-    class Figures {
-        constructor(num1, num2) {
-            num1 = 2;
-            num2 = 3;
-        }
-    }
+    // class Figures {
+    //     constructor(num1, num2) {
+    //         this.num1 = num1;
+    //         this.num2 = num2;
+    //     }
+    //     add() {
+    //     return this.num1 + this.num2;
+    // };
 
-    add() {
-        add = num1 + num2;
-    }
+    // sub() {
+    //     return this.num1 - this.num2;
+    // };
 
-    sub() {
-        sub = num1 - num2;
-    }
+    // divison() {
+    //     return this.num1 / this.num2;
+    // };
 
-    divison() {
-        divison = num1 / num2;
-    }
+    // multiple() {
+    //     return this.num1 * this.num2;
+    // };
+    // }
 
-    multiple() {
-        multiple = num1 * num2;
-    }
+    
 
-    figures.add();
-    figures.sub();
-    figures.divison();
-    figures.multiple();
+    // var figures = new Figures(2, 3);
+    // console.log(figures.add());
+    // console.log(figures.sub());
+    // console.log(figures.divison());
+    // console.log(figures.multiple());
+
 
     //자동차문제
     class Car {
@@ -98,7 +104,7 @@
         }
 
         printNameAndColor() {
-            console.log(`모델명: ${this.name} 색상: ${this.color}`)
+            console.log(`모델명: ${this.name} 색상: ${this.color}`);
         }
 
         risePrice(price) {
@@ -106,9 +112,21 @@
         }
 
         changeEngine(engine) {
-            
+            conchangeEngine = this.engine;
         }
     }
+
+    var k5 = new Car("k5", "white", 3000, "I4");
+    var k7 = new Car("k7", "white", 3800, "I5");
+    
+    k5.printNameAndColor();
+    k7.printNameAndColor();
+    console.log("k5 가격 인상 전", k5.price);
+    risePrice(100);
+    console.log("k5 가격 인상 후", k5.price);
+    console.log("k7 엔진 변경 전", k7.engine);
+    k7.changeEngine("I6");
+    console.log("k7 엔진 변경 후", k7.engine);
 </script>
 </body>
 </html>

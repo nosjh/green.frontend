@@ -23,42 +23,42 @@
     // 일반 fucntion 형태의 객체
     
     // 객체 정의
-    // function Tv(color, size) {
-    //     // 속성
-    //     this.color = color;
-    //     this.size = size;
-    //     this.onOff = false;
-    //     // 함수(기능)
-    //     this.colorPrint = function(newColor) {
-    //         console.log(`컬러는 ${this.color}`);
-    //     };
-    //     this.colorSize = function(sizeUp) {
-    //         const newSize = this.size + sizeUp;
-    //         console.log(`크기는 ${this.size}`);
-    //         return newSize;
-    //     };
-    //     this.turnOn = function() {
-    //         this.onOff = true;
-    //     };
-    //     this.turnOff = function() {
-    //         this.onOff = false;
-    //     };
-    // }
+    function Tv(color, size) {
+        // 속성
+        this.color = color;
+        this.size = size;
+        this.onOff = false;
+        // 함수(기능)
+        this.colorPrint = function(newColor) {
+            console.log(`컬러는 ${this.color}`);
+        };
+        this.colorSize = function(sizeUp) {
+            const newSize = this.size + sizeUp;
+            console.log(`크기는 ${this.size}`);
+            return newSize;
+        };
+        this.turnOn = function() {
+            this.onOff = true;
+        };
+        this.turnOff = function() {
+            this.onOff = false;
+        };
+    }
     
-    // const tv = new Tv("black", 50); //객체 생성
-    // const tv2 = new Tv("white", 60);
+    const tv = new Tv("black", 50); //객체 생성
+    const tv2 = new Tv("white", 60);
 
-    // tv.colorPrint("white");
-    // tv.colorSize(10);
-    // tv.turnOn();
-    // tv.turnOff();
+    tv.colorPrint("white");
+    tv.colorSize(10);
+    tv.turnOn();
+    tv.turnOff();
 
-    // console.log("===================================");
+    console.log("===================================");
 
-    // tv2.colorPrint("blue");
-    // tv2.colorSize(5);
-    // tv2.turnOn();
-    // tv2.turnOff();
+    tv2.colorPrint("blue");
+    tv2.colorSize(5);
+    tv2.turnOn();
+    tv2.turnOff();
     
     // prototype 형태의 객체
     // function Tv(color, size) {
@@ -105,39 +105,39 @@
     
 
     // es6 class 형태의 객체
-    class Tv {
-        constructor(color, size) {
-            this.color = color;
-            this.size = size;
-        }
+    // class Tv {
+    //     constructor(color, size) {
+    //         this.color = color;
+    //         this.size = size;
+    //     }
 
-        colorPrint(newColor) {
-            console.log(`컬러는 ${this.color}`);
-        };
-        colorSize(sizeUp) {
-            const newSize = this.size + sizeUp;
-            console.log(`크기는 ${this.size}`);
-            return newSize;
-        };
-        turnOn() {
-            this.onOff = true;
-        };
-        turnOff() {
-            this.onOff = false;
-        };
-    }
+    //     colorPrint(newColor) {
+    //         console.log(`컬러는 ${this.color}`);
+    //     };
+    //     colorSize(sizeUp) {
+    //         const newSize = this.size + sizeUp;
+    //         console.log(`크기는 ${this.size}`);
+    //         return newSize;
+    //     };
+    //     turnOn() {
+    //         this.onOff = true;
+    //     };
+    //     turnOff() {
+    //         this.onOff = false;
+    //     };
+    // }
 
-    tv.colorPrint("white");
-    tv.colorSize(10);
-    tv.turnOn();
-    tv.turnOff();
+    // tv.colorPrint("white");
+    // tv.colorSize(10);
+    // tv.turnOn();
+    // tv.turnOff();
 
-    console.log("===================================");
+    // console.log("===================================");
 
-    tv2.colorPrint("blue");
-    tv2.colorSize(5);
-    tv2.turnOn();
-    tv2.turnOff();
+    // tv2.colorPrint("blue");
+    // tv2.colorSize(5);
+    // tv2.turnOn();
+    // tv2.turnOff();
 
 </script>
 </body>
