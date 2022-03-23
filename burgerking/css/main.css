@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "utf-8";
 
 .wrap{
 	background: wheat;
@@ -101,7 +101,17 @@ section .con {
 }
 
 /* 테블릿: 767px 이상*/
-@media all and (min-width:767px){}
+@media all and (min-width:767px){
+	.guide__content {
+		flex-direction: row;
+	}
+    
+	.store__content ul li {
+		width: 16.66%;
+	}
+}
 
 /* pc: 1024px 이상 */
-@media all and (min-width:1024px){}
+@media all and (min-width:1024px){ 
+
+}
