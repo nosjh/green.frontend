@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./library/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./library/bootstrap-5.1.1-dist/css/bootstrap.min.css">
 </head>
 <body>
     <header id="main_header">
         <div class="gnb_container">
             <div class="gnb menu">
-                <h1 class="logo">
-                    <a href="#"><img src="./img/logo.svg" alt="로고"></a>
-                </h1>
+                <div class="logo">
+                    <a href="#"><img src="./img/logo.svg" alt="로고" /></a>
+                </div>
                 <ul class="nav">
                     <li>
                         <a href="#" class="underline">레이더 및 지도</a>
@@ -43,26 +44,41 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="setting"><i class="fa-solid fa-gear"></i></div>
+                <div class="setting">
+                    <a href="#"><i class="fa-solid fa-gear"></i></a>
+                </div>
                 <div class="trigger">
-                    <a href="#" class="mobile_hambuger"><i class="fa-solid fa-bars"></i></a>
-                    <a href="#" class="mobile_close"></a>
+                    <a href="#" class="mobile hambuger"><i class="fa-solid fa-bars"></i></a>
+                    <a href="#" class="mobile close"><i class="fa-solid fa-xmark"></i></a>
                 </div>
             </div>
         </div>
-        <div id="search_box"></div>
+        <div id="search_box">
+            <div id="search_bar">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                    <!-- BEM표기에 의해 id를 사용하지 않기떄문에 aria-label사용 -->
+                    <input type="text" class="form-control" placeholder="위치검색" aria-label="위치검색" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div id="current_location">
+                <div>종로 1,2,3,4 가동</div>
+                <div>대한민국</div>
+            </div>
+        </div>
     </header>
+    <div id="mobile_menu"></div>
     <div id="main_content">
         <div id="main_top">
             <article>
                 <div>
-                    <img src="https://via.placeholder.com/960x250.png/" alt="광고">
+                    <img src="https://via.placeholder.com/960x250.png" alt="광고">
                 </div>
             </article>
         </div>
         <div id="main_container">
             <section id="main_section">
-                <article id="weather_mpa">
+                <article id="weather_map">
                     <h5>대한민국 기상 레이더</h5>
                     <div id="map"></div>
                 </article>
@@ -137,5 +153,11 @@
             </div>
         </div>
     </footer>
+    <script src="./library/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6823977d5fff68b83b9d007ddd5a2c8d"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/forecast.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

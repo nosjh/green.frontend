@@ -17,7 +17,7 @@ ul { list-style: none; }
     height: 390px;
     background: gray;
     color: white;
-    background: url(../img/1024x450.jpg);
+    background: url('../img/1024x450.jpg');
     background-size: cover;
 }
 
@@ -50,8 +50,8 @@ ul { list-style: none; }
 #main_header ul.nav {
     float: left;
     overflow: hidden;
-    width: calc(100% - 213px);
     padding: 0 60px;
+    width: calc(100% - 213px);
 }
 
 #main_header ul.nav > li {
@@ -72,7 +72,7 @@ ul { list-style: none; }
     display: block;
 }
 
-#main_header ul.nav > li > .lnb > li {
+#main_header ul.nav > li:hover > .lnb > li {
     padding: 3px;
 }
 
@@ -87,7 +87,7 @@ ul { list-style: none; }
     float: right;
     width: 23px;
     text-align: right;
-    padding-top: 4;
+    padding-top: 4px;
     display: none;
 }
 
@@ -95,7 +95,101 @@ ul { list-style: none; }
     display: none;
 }
 
-/* 푸터 */
+/* 모바일 메뉴 */
+
+#mobile_menu {
+    display: none;
+    background: black;
+    color: white;
+    height: calc(100vh - 60px);
+    width: 100vw;
+    position: fixed;
+    top: 60px;
+    z-index: 100;
+}
+
+#mobile_menu a {
+    color: white;
+}
+
+#mobile_menu > ul.nav > li {
+    padding: 15px 20px;
+}
+
+/* fade in 애니메이션 정의 */
+
+.appear {
+    animation: fade-in 0.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* underline effect */
+
+.underline {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.underline:after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: tomato;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.underline:hover:after {
+    transform:  scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* 검색창 */
+
+#main_header > #search_box {
+    position: relative;
+    top: 200px;
+}
+
+#main_header > #search_box > div#search_bar {
+    width: 650px;
+    margin: 0 auto;
+}
+
+#main_header > #search_box > div#current_location {
+    width: 300px;
+    height: 35px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+#main_header > #search_box > div#current_location > div:nth-child(1) {
+    float: left;
+    text-align: center;
+    line-height: 35px;
+}
+
+#main_header > #search_box > div#current_location > div:nth-child(2) {
+    float: right;
+    text-align: center;
+    line-height: 35px;
+}
 
 #main_footer {
     height: 150px;
@@ -114,39 +208,58 @@ ul { list-style: none; }
     padding-top: 30px;
 }
 
-#main_footer > div:nth-child(2) > div {
+#main_footer > div:nth-child(2) > div { 
     width: 100%;
     font-size: 13px;
     text-align: center;
 }
 
-
-/* fake in 애니메이션 */
-
-.appear {
-    animation: fake-in 0.5s;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* 주의점-반드시 아래에 작성*/
+/* 주의점: 반드시 아래에 */
 /* 0~767 */
 @media screen and (max-width: 767px) {
     #main_header {
-        background: url(../img/425x450.jpg);
+        background: url('../img/425x450.jpg');
         background-size: cover;
     }
 
     #main_header .gnb {
-        /* v=view w=width */
-        /* %사용할경우 부모태그의 width값의 영향을 받음 */
+        width: 90vw;
+    }
+
+    #main_header ul.nav { 
+        display: none;
+    }
+
+    #main_header .setting {
+        display: none;
+    }
+
+    #main_header .trigger {
+        display: block;
+    }
+
+    #main_footer > div:nth-child(2) > div {
+        font-size: 11px;
+        text-align: left;
+    }
+
+    #main_header > #search_box > div#search_bar {
+        width: 85vw;
+    }
+    
+    #main_header > #search_box > div#current_location {
+        width: 85vw;
+    }
+}
+
+/* 768~1023 */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    #main_header {
+        background: url('../img/768x450.jpg');
+        background-size: cover;
+    }
+
+    #main_header .gnb {
         width: 90vw;
     }
 
@@ -154,32 +267,15 @@ ul { list-style: none; }
         padding: 0 30px;
     }
 
-    #main_header .setting {
-        display: block;
-    }
-
-    #main_header .trigger {
-        display: block;
-    }
-
-    #main_footer > div:nth-child(2) {
-        font-size: 11px;
-        float: left;
+    #main_footer > div:nth-child(2) > div {
+        font-size: 12px;
     }
 }
-/* 768~1023 */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    #main_header {
-        background: url(../img/768x450.jpg);
-        background-size: cover;
-    }
 
-    #main_header .gnb {
-        width: 90vw;
-    }
+/* 1024이상 */
+@media screen and (min-width: 1024px) {
+
 }
-/* 1024~ */
-@media screen and (min-width: 1024px) {}
 /* flaot 반응형 레이아웃
 상대, 절대크기 적절하게 사용
 calc (마진,패딩 고려)

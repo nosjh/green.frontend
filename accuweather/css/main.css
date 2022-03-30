@@ -27,7 +27,7 @@
     background: white;
 }
 
-#main_content > #main_container > section > #weather_map > map {
+#main_content > #main_container > section > #weather_map > #map {
     width: 90%;
     height: 360px;
     /* 카카오맵 때문에 지도 index 반드시 지정해줘야함 */
